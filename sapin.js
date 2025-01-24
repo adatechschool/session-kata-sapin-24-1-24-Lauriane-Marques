@@ -7,5 +7,14 @@ function afficherEtoiles(n){
     console.log(ligneEtoiles)
 }
 
-afficherEtoiles(4)
+//afficherEtoiles(4)
 
+function afficherRectangle(hauteur, largeur){
+    let rectangle = []
+    for(let i=0; i<hauteur;i++){
+        rectangle.push(afficherEtoiles(largeur))
+    }
+    return rectangle
+}
+
+afficherRectangle(6,3)
