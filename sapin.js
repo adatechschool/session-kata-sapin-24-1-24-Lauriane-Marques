@@ -1,30 +1,51 @@
+// function afficherEtoiles(n){
+//     let etoiles = []
+//     for(let i =0; i<n;i++){
+//         etoiles.push('*')
+//     }
+//     let ligneEtoiles = etoiles.join('')
+//     console.log(ligneEtoiles)
+// }
+
 function afficherEtoiles(n){
-    let etoiles = []
-    for(let i =0; i<n;i++){
-        etoiles.push('*')
-    }
-    let ligneEtoiles = etoiles.join('')
-    console.log(ligneEtoiles)
+    const ETOILE = '*'
+    return ETOILE.repeat(n)
 }
 
-//afficherEtoiles(4)
+//console.log(afficherEtoiles(4))
+
+// function afficherRectangle(hauteur, largeur){
+//     let rectangle = []
+//     for(let i=0; i<hauteur;i++){
+//         rectangle.push(afficherEtoiles(largeur))
+//     }
+//     return rectangle
+// }
 
 function afficherRectangle(hauteur, largeur){
-    let rectangle = []
+    let largeurSapin = afficherEtoiles(largeur)
     for(let i=0; i<hauteur;i++){
-        rectangle.push(afficherEtoiles(largeur))
+        console.log(largeurSapin)
     }
-    return rectangle
 }
 
 //afficherRectangle(6,3)
 
 function afficherTriangleDroite(n) {
-    let coteDroit = []
     for(let i=0; i<n;i++){
-        coteDroit.push(afficherEtoiles(i), '\\')
+        let etoiles = afficherEtoiles(i)
+        etoiles += '\\'
+        console.log(etoiles)
     }
-    return coteDroit
 }
 
-afficherTriangleDroite(5)
+//afficherTriangleDroite(5)
+
+function afficherTriangleGauche(n) {
+    for(let i=0; i<n;i++){
+        let etoiles = '/' + afficherEtoiles(i) 
+        console.log(etoiles.padStart(n,' '))
+    }
+}
+
+afficherTriangleGauche(5)
