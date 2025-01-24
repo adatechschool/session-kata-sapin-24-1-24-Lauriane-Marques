@@ -17,4 +17,14 @@ function afficherRectangle(hauteur, largeur){
     return rectangle
 }
 
-afficherRectangle(6,3)
+//afficherRectangle(6,3)
+
+function afficherTriangleDroite(n) {
+    let coteDroit = []
+    for(let i=0; i<n;i++){
+        coteDroit.push(afficherEtoiles(i), '\\')
+    }
+    return coteDroit
+}
+
+afficherTriangleDroite(5)
