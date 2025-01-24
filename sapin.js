@@ -48,4 +48,20 @@ function afficherTriangleGauche(n) {
     }
 }
 
-afficherTriangleGauche(5)
+//afficherTriangleGauche(5)
+
+function afficherPointeSapin(n) {
+    let etoileTop = '+'
+    console.log(etoileTop.padStart(n+1, ' '))
+    for(let i=0; i<n;i++){
+        let nombreEspace = n-i-1
+        const ESPACE = ' '
+        let etoiles = ESPACE.repeat(nombreEspace )+ '/' + afficherEtoiles(i)+ '|' + afficherEtoiles(i)+ '\\'
+        console.log(etoiles)
+
+        //console.log(etoiles.padStart(espace,'.'))
+        //Je voulais utiliser cette méthode pour faire commencer les étages en fonction de la longueur actuelle de la chaine mais je n'ai pas réussi
+        //même en testant plein de choses et plein de valeurs différentes de début
+}
+}
+afficherPointeSapin(6)
